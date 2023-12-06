@@ -3,7 +3,8 @@ import { useState } from "react";
 import ItemListContainer from "./components/ItemListContainer";
 
 import { Header } from "./components/header"
-import { Carrusel } from "./components/Carrusel"
+
+import Footer from "./components/Footer";
 
 function App() {
   
@@ -20,8 +21,10 @@ function App() {
       <ItemListContainer greeting={greeting} />
         </div>
    
-    <Carrusel />
+    
     <ItemListContainer />
+
+    <Footer />
 
   </div>
   );
