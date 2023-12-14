@@ -2,7 +2,7 @@ import store from '../assets/img/store.svg'
 
 export const CartWidget = () => {
   return (
-    <div>
+    <div className='flex'>
         <img className='cursor-pointer' src={store} alt="" />
         <span className='flex justify-start'>
             1
@@ -11,4 +11,4 @@ export const CartWidget = () => {
   )
 }
 
-export default CartWidget
+export default CartWidget;
