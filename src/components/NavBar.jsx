@@ -1,39 +1,46 @@
 
-import iconHaburg from '../assets/img/icon-hamb.png'
-import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom';
+import iconHaburg from '../assets/img/icon-hamb.png';
+import CartWidget from './CartWidget';
+import { useCategory } from '../hooks/useCategory';
+
 
 export const NavBar = () => {
+  const { category } = useCategory();
+  
   return (
     <div>
-    <ul className="hidden sm:flex text-[18px] sm:w-[438px] sm:place-content-around sm:text-[16px] sm:items-center">
-   
-    <div className="submenu">
-      <button>Productos</button>
-        <div className="submenu-content">
-          <a href="#">Producto1</a>
-            <a href="#">Producto2</a>
-              <a href="#">Producto3</a>
-    </div>
-</div>
+      <ul className="sm:flex text-[18px] sm:w-[438px] sm:place-content-around sm:text-[16px] sm:items-center">
         <li>
-            <a href="#">Misión</a>
+            <Link to="/" className='hover:text-gray-400'>Home</Link>
         </li>
         <li>
-            <a href="#">Visión</a>
+            <a href="#" className='hover:text-gray-400'>Misión</a>
         </li>
         <li>
-            <a href="#">Contacto</a>
+            <a href="#" className='hover:text-gray-400'>Contacto</a>
         </li>
-        <li>
-            <a href="#">Ubicación</a>
-        </li>
-        <li>
-            <CartWidget />
-        </li>
-
-    </ul>
-    
+        <div className="submenu">
+            <button className='hover:text-gray-400'>Categorias</button>
+              <div className="submenu-content">
+                <li>Productos</li>
+                {
+                  category.map((item, index) => {
+                    return(
+                      
+                      <Link></Link>
+                    )
+                  })
+                }
+              </div>
+        </div>
+          <li>
+              <CartWidget />
+          </li>
+      </ul>
     <img className='w-10 h-6 cursor-pointer sm:hidden' src={iconHaburg} alt="" />
     </div>
-  )
-}
+  );
+};
+
+export default NavBar;
