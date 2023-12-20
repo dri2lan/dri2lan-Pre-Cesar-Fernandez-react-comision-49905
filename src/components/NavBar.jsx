@@ -25,13 +25,12 @@ export const NavBar = () => {
               <div className="submenu-content">
                 <li>Productos</li>
                 {
-                  category.map((item, index) => {
+                  category.map((category) => {
                     return(
-                      
-                      <Link></Link>
-                    )
-                  })
-                }
+                    <Link to={`/category:id${category.id}`}>{category.name}</Link>
+                      )
+                    })
+                  }
               </div>
         </div>
           <li>
