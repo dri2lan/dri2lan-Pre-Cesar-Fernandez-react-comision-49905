@@ -44,9 +44,9 @@ export const useGetProductByCategory= (category) => {
   const [products, setProducts] = useState ([]);
 
   useEffect (() =>{
-    useGetProductByCategory(category)
+    getProductByCategory(category)
     .then((res) => {
-    setProducts (res.data. products)
+    setProducts (res.data.products)
     })
     .catch((error) => {
       console.log(error)

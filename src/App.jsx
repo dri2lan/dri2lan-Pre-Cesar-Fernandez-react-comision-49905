@@ -1,6 +1,5 @@
 import { MainRouter } from "./router/MainRouter";
 
-
 function App() {
  
   //console.log (products)

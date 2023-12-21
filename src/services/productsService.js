@@ -12,11 +12,11 @@ export async function getProducts(limit = 5) {
 }
 
 export async function getProductById(id) {
-    return await axios.get('https://dummyjson.com/products/' + id);
+    return await axios.get(`https://dummyjson.com/products/' + id`);
 
 }
 
 export async function getProductByCategory(category) {
-    return await axios.get('https://dummyjson.com/products/category/' + category);
+    return await axios.get(`https://dummyjson.com/products/category/${category}`);
 
 }

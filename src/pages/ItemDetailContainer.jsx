@@ -3,7 +3,7 @@ import { useGetProductById } from "../hooks/useProducts";
 
 export const ItemDetailContainer = () => {
   const { productId } = useParams();
-    const {product} = useGetProductById(productId);
+  const {product} = useGetProductById(productId);
 
   return (
     <div key={product.id} className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/4 mb-10">
@@ -31,6 +31,5 @@ export const ItemDetailContainer = () => {
                 </div>
               </div>
             </div>
-
   );
 };
